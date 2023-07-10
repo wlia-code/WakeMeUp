@@ -94,7 +94,7 @@ body {
     -moz-transform: rotateY(180deg);
 }
 
-.start-game-button {
+ .start-game-button {
     position: fixed;
     left: 0;
     top: 0;
@@ -102,7 +102,7 @@ body {
     height: 100%;
     z-index: 3;
     background-color: #060ab2b0;
-}
+} 
 
 .start-game-button span {
     position: absolute;

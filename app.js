@@ -1,3 +1,13 @@
+//click event listener for the start game button
+document.querySelector(".start-game-button span").onclick = function () {
+    let yourName = prompt("Whats Your Name?");
+    if (yourName == null || yourName == "") {
+        document.querySelector(".player-name span").innerHTML = 'Unknown';
+    } else {
+        document.querySelector(".player-name span").innerHTML = yourName;
+    }
+    document.querySelector(".start-game-button").remove();
+};
 let durationTime = 1000;
 let gameBlocks = document.querySelector(".game-boards")
 let blocks = Array.from(gameBlocks.children)
@@ -67,7 +77,11 @@ function shuffle(array) {
 }
 
 //add timer after the game is start
-/*let timeLeft=document.getElementById("timer");
-setInterval (()=>{
-    --timeLeft.textContent ;
-    },150 );*/
+let timeLeft = document.getElementById("timer");
+setInterval(() => {
+    console.log(timeLeft);
+    if (timeLeft.textContent > 0) {
+        --timeLeft.textContent;
+    }
+
+}, 150);
