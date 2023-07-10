@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.player-info {
+    width: 80vw;
+    margin: 2vh auto 0;
+    padding: 10px;
+    overflow: hidden;
+    border: 2px solid #060AB2;
+    background: #f6f6f6;
+}
+
+.player-info .player-name {
+    float: left;
+    width: 50%;
+}
+
+.player-info .player-tries {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.game-boards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 5vh auto;
+}
