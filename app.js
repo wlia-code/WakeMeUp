@@ -75,13 +75,3 @@ function shuffle(array) {
     }
     return array;
 }
-
-//add timer after the game is start
-/*let timeLeft = document.getElementById("timer");
-setInterval(() => {
-    console.log(timeLeft);
-    if (timeLeft.textContent > 0) {
-        --timeLeft.textContent;
-    }
-
-}, 150);*/
