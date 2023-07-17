@@ -10,8 +10,10 @@
 </head>
 
 <body>
-    <!-- Player name and wrong tries -->
-    <section class="main-game">
+    <main class="main-game">
+        <header>
+            <h1> 👾 wake me up! 👾 </h1>
+        </header>
         <div class="start-game-button">
             <span>strat game</span>
         </div>
@@ -24,9 +26,8 @@
             </div>
             <div class="timer" id="timer">10</div>
         </div>
-        <!-- game board and blocks -->
         <div class="game-boards">
-            <div class="game-block">
+            <div class="game-block" data-animals="bear">
                 <div class="card front"></div>
                 <div class="card rear">
                     <img src="img/bear.png" alt="Bear picture in white and black">
@@ -147,7 +148,28 @@
                 </div>
             </div>
         </div>
-    </section>
+
+        <footer>
+            <div>
+                <h3>find <span>me</span> on</h3>
+            </div>
+
+            <ul class="social_links">
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                        aria-label="Vist our instagram chanel (open in new tap)">
+                        <i class="fa-brands fa-github"></i></a>
+                </li>
+
+                <li>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                        aria-label="Vist our twitter page (open in new tap)"><i id="twitt"
+                            class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </footer>
+    </main>
+    <script src="https://kit.fontawesome.com/bc3084502c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -4,13 +4,35 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+
 }
 
+main {
+    flex: 1;
+}
+
+header {
+    height: 7vh;
+    padding: 5px 20px;
+    font-size: 0.7vw;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    text-transform: capitalize;
+
+}
 
 .player-info {
     width: 80vw;
@@ -45,7 +67,7 @@ body {
 }
 
 .game-boards .game-block {
-    height: 12vw;
+    height: 10vw;
     width: calc(20% - 1vw);
     margin: 20px 1px;
     position: relative;
@@ -94,7 +116,7 @@ body {
     -moz-transform: rotateY(180deg);
 }
 
- .start-game-button {
+.start-game-button {
     position: fixed;
     left: 0;
     top: 0;
@@ -102,7 +124,7 @@ body {
     height: 100%;
     z-index: 3;
     background-color: #060ab2b0;
-} 
+}
 
 .start-game-button span {
     position: absolute;
@@ -116,4 +138,81 @@ body {
     color: #9ea8b6;
     background-color: #090958d5;
     cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2vh 2vw;
+    text-align: center;
+}
+
+footer div {
+    margin-bottom: 2vh;
+}
+
+footer h3 {
+    font-size: 3vh;
+}
+
+footer span {
+    color: #ffcc00;
+}
+
+.social_links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social_links li {
+    margin: 0 2vw;
+}
+
+.social_links a {
+    color: #fff;
+    font-size: 4vh;
+}
+
+.fa-github:before {
+    content: "\f09b";
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+
+@media screen and (max-width: 768px) {
+    footer h3 {
+        font-size: 2.4vh;
+    }
+
+    .social_links a {
+        font-size: 3.2vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    footer h3 {
+        font-size: 1.2rem;
+    }
+
+    .social_links a {
+        font-size: 1.6rem;
+    }
+
+    header {
+        font-size: 2vw;
+        height: 8vh;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        font-size: 1.5vw;
+        height: 6vh;
+    }
 }
