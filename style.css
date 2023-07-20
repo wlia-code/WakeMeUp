@@ -67,7 +67,7 @@ header {
 }
 
 .game-boards .game-block {
-    height: 10vw;
+    height: 12vw;
     width: calc(20% - 1vw);
     margin: 20px 1px;
     position: relative;

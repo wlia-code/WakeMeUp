@@ -5,170 +5,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
     <title>WakeMeUp(MemoryGame)</title>
 </head>
 
 <body>
-    <main class="main-game">
-        <header>
-            <h1> 👾 wake me up! 👾 </h1>
-        </header>
-        <div class="start-game-button">
-            <span>strat game</span>
-        </div>
+    <!-- Player name and wrong tries -->
+
+    <header>
         <div class="player-info">
             <div class="player-name">
-                Hi: <span></span>
+                Hello: <span></span> 🤠
             </div>
             <div class="player-tries">
                 Wrong Tries: <span>0</span>
             </div>
-            <div class="timer" id="timer">10</div>
         </div>
-        <div class="game-boards">
-            <div class="game-block" data-animals="bear">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/bear.png" alt="Bear picture in white and black">
+    </header>
+
+    <!--Main Game Code-->
+
+    <main class="main-game">
+
+        <!-- Start button section -->
+
+        <section class="start-game">
+            <div class="start-game-overlay">
+
+                <div class="start-game-message">
+                    <h2>Welcome!</h2>
+
+                    <p class="how-to-play">how to play :
+                        you need to match pairs of cards with identical symbols by flipping them one at a time.
+                    </p>
+                    <p>Please enter your name to start the game or continue as a guest.</p>
+
+                    <input type="text" id="name-input" placeholder="Enter your name">
+                    <div class="error-message" style="color: red; display: none;">Please enter your name.</div>
+
+                    <button id="start-button">Start Game</button>
+                    <button id="guest-button">Play as Guest</button>
                 </div>
+
             </div>
-            <div class="game-block" data-animals="bear">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/bear.png" alt="Bear picture in white and black">
+        </section>
+
+        <!--Main Game boards section-->
+
+        <section class="game-blocks">
+
+            <div class="game-boards">
+
+                <div class="game-block" data-animals="bear">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/bear.png" alt="Bear picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="bug">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/bug.png" alt="Bug picture in white and black">
+                <div class="game-block" data-animals="bear">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/bear.png" alt="Bear picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="bug">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/bug.png" alt="Bug picture in white and black">
+
+
+                <div class="game-block" data-animals="bug">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/bug.png" alt="Bug picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="cow">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/cow.png" alt="Cow picture in white and black">
+                <div class="game-block" data-animals="bug">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/bug.png" alt="Bug picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="cow">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/cow.png" alt="Cow picture in white and black">
+
+
+                <div class="game-block" data-animals="cow">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/cow.png" alt="Cow picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="dog-puppy-face">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/dog-puppy-face.png" alt="dog puppy face picture in white and black">
+                <div class="game-block" data-animals="cow">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/cow.png" alt="Cow picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="dog-puppy-face">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/dog-puppy-face.png" alt="dog puppy face picture in white and black">
+
+
+                <div class="game-block" data-animals="dog-puppy-face">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/dog-puppy-face.png" alt="dog puppy face picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="dog">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/dog.png" alt="Dog picture in white and black">
+                <div class="game-block" data-animals="dog-puppy-face">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/dog-puppy-face.png" alt="dog puppy face picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="dog">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/dog.png" alt="Dog picture in white and black">
+
+
+                <div class="game-block" data-animals="dog">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/dog.png" alt="Dog picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="dolphin">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/dolphin.png" alt="dolphin picture in white and black">
+                <div class="game-block" data-animals="dog">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/dog.png" alt="Dog picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="dolphin">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/dolphin.png" alt="Bear dolphin in white and black">
+
+
+                <div class="game-block" data-animals="dolphin">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/dolphin.png" alt="dolphin picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="donkey">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/donkey.png" alt="donkey picture in white and black">
+                <div class="game-block" data-animals="dolphin">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/dolphin.png" alt="Bear dolphin in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="donkey">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/donkey.png" alt="donkey picture in white and black">
+
+
+                <div class="game-block" data-animals="donkey">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/donkey.png" alt="donkey picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="fish">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/fish.png" alt="fish picture in white and black">
+                <div class="game-block" data-animals="donkey">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/donkey.png" alt="donkey picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="fish">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/fish.png" alt="fish picture in white and black">
+
+
+                <div class="game-block" data-animals="fish">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/fish.png" alt="fish picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="horse">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/horse.png" alt="horse picture in white and black">
+                <div class="game-block" data-animals="fish">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/fish.png" alt="fish picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="horse">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/horse.png" alt="horse picture in white and black">
+
+
+                <div class="game-block" data-animals="horse">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/horse.png" alt="horse picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="reindeer">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/reindeer.png" alt="reindeer picture in white and black">
+                <div class="game-block" data-animals="horse">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/horse.png" alt="horse picture in white and black">
+                    </div>
                 </div>
-            </div>
-            <div class="game-block" data-animals="reindeer">
-                <div class="card front"></div>
-                <div class="card rear">
-                    <img src="img/reindeer.png" alt="reindeer picture in white and black">
+
+
+                <div class="game-block" data-animals="reindeer">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/reindeer.png" alt="reindeer picture in white and black">
+                    </div>
                 </div>
+                <div class="game-block" data-animals="reindeer">
+                    <div class="card front"></div>
+                    <div class="card rear">
+                        <img src="img/reindeer.png" alt="reindeer picture in white and black">
+                    </div>
+                </div>
+
             </div>
-        </div>
+
+        </section>
+
+        <!--footer and social links-->
 
         <footer>
+
             <div>
                 <h3>find <span>me</span> on</h3>
             </div>
 
             <ul class="social_links">
                 <li>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener"
-                        aria-label="Vist our instagram chanel (open in new tap)">
+                    <a href="https://www.github.com/wlia-code" target="_blank" rel="noopener"
+                        aria-label="Vist my github page (open in new tap)">
                         <i class="fa-brands fa-github"></i></a>
                 </li>
 
                 <li>
                     <a href="https://www.twitter.com" target="_blank" rel="noopener"
-                        aria-label="Vist our twitter page (open in new tap)"><i id="twitt"
+                        aria-label="Vist my twitter profile (open in new tap)"><i id="twitt"
                             class="fa-brands fa-twitter"></i></a>
                 </li>
             </ul>
+            <p>© 2023 WasimAlrawas</p>
+
         </footer>
+
     </main>
+
+    <!--Scripts-->
+
+    <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/bc3084502c.js" crossorigin="anonymous"></script>
 </body>
 
