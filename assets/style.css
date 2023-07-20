@@ -1,45 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/*Global style*/
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, Helvetica, sans-serif;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    display: flex;
-    flex-direction: column;
-
 }
 
-main {
-    flex: 1;
-}
-
-header {
-    height: 7vh;
-    padding: 5px 20px;
-    font-size: 0.7vw;
-    text-align: center;
-    color: #fff;
-    background-color: #333;
-    text-transform: capitalize;
-
-}
+/*player info area and header*/
 
 .player-info {
     width: 80vw;
     margin: 2vh auto 0;
     padding: 10px;
     overflow: hidden;
-    border: 2px solid #060AB2;
+    border: 2px solid #4a3c4d;
+    font-size: 1.5em;
     background: #f6f6f6;
 }
 
@@ -53,6 +38,8 @@ header {
     width: 50%;
     text-align: right;
 }
+
+/*Main game style*/
 
 .game-boards {
     display: flex;
@@ -108,7 +95,7 @@ header {
 
 }
 
-/* game blocks that are flipped */
+
 .game-boards .game-block.is-flipped,
 .game-boards .game-block.has-match {
     transform: rotateX(180deg);
@@ -116,103 +103,346 @@ header {
     -moz-transform: rotateY(180deg);
 }
 
-.start-game-button {
+/*Strat game buttons and text*/
+
+.start-game-overlay {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 3;
     background-color: #060ab2b0;
+    text-transform: capitalize;
+
 }
 
-.start-game-button span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 15px 25px;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
+.start-game-message {
+    width: 36vw;
+    height: 46vh;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
-    color: #9ea8b6;
-    background-color: #090958d5;
-    cursor: pointer;
+    background-color: #ffffff;
+    padding: 2vw;
+    border-radius: 5px;
+    text-align: center;
+
 }
+
+.start-game-message h2 {
+    font-size: 2.4vw;
+    margin-bottom: 1vh;
+}
+
+.start-game-message p {
+    font-size: 1.8vw;
+    margin-bottom: 2vh;
+
+}
+
+.start-game-message input {
+    padding: 1.5vw 1.2vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: solid 2px #161624;
+}
+
+.start-game-message button {
+    color: rgb(0, 1, 1);
+    padding: 10px 20px;
+    font-size: 1.6vw;
+    text-transform: capitalize;
+
+}
+
+.start-game-message button:hover {
+    color: rgb(22, 33, 153);
+    background-color: #ffffff;
+}
+
+/*Styles for the finish game dialog box*/
+
+#finish-dialog {
+    width: 50vw;
+    height: 50vh;
+    top: 25%;
+    left: 25%;
+    background-color: #0609b2d7;
+    padding: 3vh 4vw;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    z-index: 3;
+}
+
+#finish-message {
+    font-size: 2.5vw;
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 3vh;
+    text-transform: capitalize;
+    color: #f6f6f6;
+}
+
+#play-again-button,
+#finish-button {
+    font-size: 2vw;
+    padding: 1.5vh 4vw;
+    margin: 0.5vh 1vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(32, 147, 28);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#play-again-button:hover,
+#finish-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2vh 2vw;
+    width: 100%;
+    padding: 2vh 0;
+    background-color: #f5f5f5;
     text-align: center;
+    position: relative;
+    bottom: 0;
 }
 
-footer div {
-    margin-bottom: 2vh;
+footer p {
+    font-size: 1.8vw;
+    margin-top: 15px;
 }
 
 footer h3 {
-    font-size: 3vh;
-}
-
-footer span {
-    color: #ffcc00;
-}
-
-.social_links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3b394e;
+    padding-bottom: 2%;
 }
 
 .social_links li {
-    margin: 0 2vw;
+    display: inline;
+    list-style: none;
+    margin: 1%;
 }
 
-.social_links a {
-    color: #fff;
-    font-size: 4vh;
+.social_links li a {
+    text-decoration: none;
+    transition: 0.7s;
 }
 
-.fa-github:before {
-    content: "\f09b";
+.social_links i {
+    font-size: 150%;
+    transition: 0.7s;
 }
 
-.fa-twitter:before {
-    content: "\f099";
+.social_links i:hover {
+    transform: scale(1.5);
 }
 
-@media screen and (max-width: 768px) {
-    footer h3 {
-        font-size: 2.4vh;
+
+.fa-github {
+    color: #27429a;
+}
+
+
+.fa-twitter {
+    color: #3a6cf4;
+}
+
+/*Media queries*/
+
+@media only screen and (max-width: 2400px) {
+    .start-game-message {
+        width: 80vw;
+        height: 60vh;
     }
 
-    .social_links a {
-        font-size: 3.2vh;
+    .start-game-message h2 {
+        font-size: 2.2vw;
+    }
+
+    .start-game-message p {
+        font-size: 1.6vw;
+    }
+
+    .start-game-message button {
+        padding: 0.6vw 1.5vw;
+        font-size: 1.6vw;
     }
 }
 
-
-@media screen and (max-width: 768px) {
-    footer h3 {
-        font-size: 1.2rem;
+@media only screen and (max-width: 1400px) {
+    .start-game-message {
+        width: 80vw;
+        height: 60vh;
     }
 
-    .social_links a {
-        font-size: 1.6rem;
+    .start-game-message h2 {
+        font-size: 2.2vw;
     }
 
-    header {
+    .start-game-message p {
+        font-size: 1.6vw;
+    }
+
+    .start-game-message button {
+        padding: 0.6vw 1.5vw;
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .start-game-message {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .start-game-message h2 {
+        font-size: 3vw;
+    }
+
+    .start-game-message p {
         font-size: 2vw;
-        height: 8vh;
     }
 
+    .start-game-message input {
+        padding: 1.5vw 1.8vw;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    }
+
+    .start-game-message button {
+        padding: 1.5vw 3vw;
+        font-size: 2vw;
+    }
 }
 
-@media screen and (min-width: 1200px) {
-    header {
-        font-size: 1.5vw;
-        height: 6vh;
+@media screen and (max-width: 900px) {
+    .start-game-message {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .start-game-message h2 {
+        font-size: 3vw;
+    }
+
+    .start-game-message p {
+        font-size: 2vw;
+    }
+
+    .start-game-message input {
+        padding: 1.5vw 1.8vw;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    }
+
+    .start-game-message button {
+        padding: 1.5vw 3vw;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .start-game-message {
+        width: 70vw;
+        height: 60vh;
+    }
+
+    .start-game-message h2 {
+        font-size: 3.5vw;
+    }
+
+    .start-game-message p {
+        font-size: 2.5vw;
+    }
+
+    .start-game-message input {
+        padding: 2vw 2.4vw;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    .start-game-message button {
+        padding: 2vw 4vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .start-game-message {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    .start-game-message h2 {
+        font-size: 2vw;
+    }
+
+    .start-game-message p {
+        font-size: 1.4vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .start-game-message {
+        width: 60vw;
+        height: 50vh;
+    }
+
+    .start-game-message h2 {
+        font-size: 4vw;
+    }
+
+    .start-game-message p {
+        font-size: 3vw;
+    }
+
+    .start-game-message input {
+        padding: 2.5vw 3vw;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
+    }
+
+    .start-game-message button {
+        padding: 2.5vw 4vw;
+        font-size: 3vw;
+        margin-top: 0.5vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .start-game-message {
+        width: 60vw;
+        height: 50vh;
+    }
+
+    .start-game-message h2 {
+        font-size: 4vw;
+    }
+
+    .start-game-message p {
+        font-size: 3vw;
+    }
+
+    .start-game-message input {
+        padding: 2.5vw 3vw;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
+    }
+
+    .start-game-message button {
+        padding: 3.5vw 5vw;
+        font-size: 3vw;
+        margin-top: 1vh;
     }
 }
