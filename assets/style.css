@@ -18,6 +18,15 @@ body {
 
 /*player info area and header*/
 
+h1 {
+    font-family: Poppins, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    text-transform: capitalize;
+    color: #3a3372;
+    padding-bottom: 2%;
+}
+
 .player-info {
     width: 80vw;
     margin: 2vh auto 0;
