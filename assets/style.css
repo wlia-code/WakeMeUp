@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Poppins, Helvetica, sans-serif;
     -webkit-user-select: none;
@@ -16,8 +15,9 @@ body {
     user-select: none;
 }
 
-/*player info area and header*/
+/*----------player info area and header-------------*/
 
+/**/
 h1 {
     font-family: Poppins, Helvetica, sans-serif;
     text-align: center;
@@ -48,7 +48,7 @@ h1 {
     text-align: right;
 }
 
-/*Main game style*/
+/* -------------Main game style--------------- */
 
 .game-boards {
     display: flex;
@@ -70,7 +70,7 @@ h1 {
     transition: transform .5s;
     transform-style: preserve-3d;
     cursor: pointer;
-    /* transform: rotateY(180deg); */
+    transform: rotateY(180deg);
 }
 
 .game-boards .game-block .front {
@@ -179,7 +179,7 @@ h1 {
 
 #finish-dialog {
     width: 50vw;
-    height: 50vh;
+    height: 35vh;
     top: 25%;
     left: 25%;
     background-color: #0609b2d7;
@@ -199,10 +199,21 @@ h1 {
     color: #f6f6f6;
 }
 
-#play-again-button,
+#play-again-button {
+    font-size: 2vw;
+    padding: 1.5vh 4.5vw;
+    margin: 0.5vh 1vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(32, 147, 28);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
 #finish-button {
     font-size: 2vw;
-    padding: 1.5vh 4vw;
+    padding: 1.5vh 6.5vw;
     margin: 0.5vh 1vw;
     border: none;
     border-radius: 4px;
@@ -444,9 +455,10 @@ footer h3 {
 }
 
 @media screen and (max-width: 400px) {
-    h1{
+    h1 {
         font-size: large;
     }
+
     .start-game-message {
         width: 60vw;
         height: 50vh;
