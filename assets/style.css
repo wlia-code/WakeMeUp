@@ -154,7 +154,7 @@ h1 {
 }
 
 .start-game-message input {
-    padding: 1.5vw 1.2vw;
+    padding: 1vw 1.2vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     border: solid 2px #161624;
@@ -166,8 +166,8 @@ h1 {
 
 .start-game-message button {
     color: rgb(0, 1, 1);
-    padding: 10px 15px;
-    font-size: 1.6vw;
+    padding: 1.5vw 3vw;
+    font-size: 2vw;
     text-transform: capitalize;
 
 }
