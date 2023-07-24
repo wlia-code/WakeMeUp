@@ -1,11 +1,17 @@
-// Variables
+/**
+ * Variables
+ * and referenced shuffle function 
+ */
 const durationTime = 1000;
 const gameBlocks = document.querySelector(".game-boards");
 const blocks = Array.from(gameBlocks.children);
 const orderRange = Array.from(Array(blocks.length).keys());
 shuffle(orderRange);
 
-// Set order for the blocks and add click event listeners
+/**
+ * Set order for the blocks
+ * and add click event listeners.
+ */
 blocks.forEach((block, index) => {
     block.style.order = orderRange[index];
     block.addEventListener("click", function () {
@@ -13,7 +19,10 @@ blocks.forEach((block, index) => {
     });
 });
 
-//flip a card when clicked
+/**
+ * flip a card when clicked
+ * and referenced stopClicking function
+*/
 function flipCard(selectedBlock) {
     selectedBlock.classList.add('is-flipped');
     let allFlippedBlocks = blocks.filter(flippedBlock => flippedBlock.classList.contains("is-flipped"));
@@ -23,7 +32,10 @@ function flipCard(selectedBlock) {
     }
 }
 
-//disable clicking on all blocks for a short duration
+/**
+ * disable clicking on all blocks
+ *  for a short duration
+ */
 function stopClicking() {
     gameBlocks.classList.add('no-clicking');
     setTimeout(() => {
@@ -31,7 +43,12 @@ function stopClicking() {
     }, durationTime);
 }
 
-//check if the two flipped blocks match
+/**
+ * Checks if two blocks have matching animals
+ * and handles the appropriate actions.
+ * The first block element to compare.
+ * The second block element to compare.
+ */
 function checkMatchedBlocks(firstBlock, secondBlock) {
     let triesElement = document.querySelector('.player-tries span');
     if (firstBlock.dataset.animals === secondBlock.dataset.animals) {
@@ -42,6 +59,7 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
         checkAllMatched();
     } else {
         triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1;
+        // Wait for a short duration before flipping back the unmatched blocks
         setTimeout(() => {
             firstBlock.classList.remove('is-flipped');
             secondBlock.classList.remove('is-flipped');
@@ -49,7 +67,10 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
     }
 }
 
-//shuffle an array
+/**
+ *Shuffles the elements of an array using
+ *the Fisher-Yates.
+ */
 function shuffle(array) {
     let current = array.length,
         temp,
@@ -64,7 +85,10 @@ function shuffle(array) {
     return array;
 }
 
-//flip or unflip all cards based on the provided action
+/**
+ *flip or unflip all cards 
+ *based on the provided action
+ */
 function flipAllCards(action) {
     blocks.forEach(block => {
         if (action === "flip") {
@@ -75,7 +99,10 @@ function flipAllCards(action) {
     });
 }
 
-// Get references to the necessary elements in the finish dialog
+/**
+ *Get references to the necessary
+ *elements in the finish dialog
+ */
 const finishDialog = document.getElementById("finish-dialog");
 const finishMessage = document.getElementById("finish-message");
 const playAgainButton = document.getElementById("play-again-button");
@@ -108,10 +135,16 @@ function resetGame() {
     });
 }
 
+/**
+ *addEventListener to the finish game dialog
+ */
 playAgainButton.addEventListener("click", handlePlayAgainButtonClick);
 finishButton.addEventListener("click", handleFinishButtonClick);
 
-// start the game by flipping all cards initially and then unflipping them
+/**
+ *start the game by flipping all
+ *cards initially and then unflipping them
+ */
 function startGame(playerName) {
     document.querySelector(".player-name span").textContent = playerName;
     document.querySelector(".player-tries span").textContent = "0";
@@ -124,7 +157,11 @@ function startGame(playerName) {
     }, 2500);
 }
 
-// Event listener for the Start Game button and "Play as Guest" and blank input message
+/**
+ * Event listener for the Start
+ * Game button and "Play as Guest"
+ * and blank input message
+ */
 document.getElementById("start-button").addEventListener("click", function () {
     let yourName = document.getElementById("name-input").value.trim();
     const errorMessageElement = document.querySelector(".error-message");
