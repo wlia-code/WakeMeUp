@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
-/*Global style*/
+/*---Global style---*/
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
+/*---body default settings---*/
 body {
     font-family: Poppins, Helvetica, sans-serif;
     -webkit-user-select: none;
@@ -15,9 +15,9 @@ body {
     user-select: none;
 }
 
-/*----------player info area and header-------------*/
+/*-------player info area and header-------*/
 
-/**/
+/* Style for the main heading */
 h1 {
     font-family: Poppins, Helvetica, sans-serif;
     text-align: center;
@@ -50,6 +50,7 @@ h1 {
 
 /* -------------Main game style--------------- */
 
+/* Style for the game boards container */
 .game-boards {
     display: flex;
     flex-wrap: wrap;
@@ -62,6 +63,7 @@ h1 {
     pointer-events: none;
 }
 
+/* Style for each game block (card) */
 .game-boards .game-block {
     height: 12vw;
     width: calc(20% - 1vw);
@@ -104,7 +106,7 @@ h1 {
 
 }
 
-
+/* Style for each game block (card) */
 .game-boards .game-block.is-flipped,
 .game-boards .game-block.has-match {
     transform: rotateX(180deg);
@@ -112,7 +114,7 @@ h1 {
     -moz-transform: rotateY(180deg);
 }
 
-/*Strat game buttons and text*/
+/*------ Strat game buttons and text ------*/
 
 .start-game-overlay {
     position: fixed;
@@ -175,7 +177,7 @@ h1 {
     background-color: #ffffff;
 }
 
-/*Styles for the finish game dialog box*/
+/*------- Styles for the finish game dialog box -------*/
 
 #finish-dialog {
     width: 50vw;
@@ -228,7 +230,7 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Footer Styles */
+/*------- Footer Styles and social links  -------*/
 
 footer {
     width: 100%;
@@ -282,7 +284,7 @@ footer h3 {
     color: #3a6cf4;
 }
 
-/*Media queries*/
+/*-----Media queries-----*/
 
 @media only screen and (max-width: 2400px) {
     .start-game-message {
