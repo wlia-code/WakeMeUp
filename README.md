@@ -66,7 +66,7 @@ The purpose of this website is to provide an engaging memory matching game that 
 
   - No errors were returned when passing through [WAVE Evaluation Tool](https://wave.webaim.org/)
 
-  - Accessibility second Testing Useing [chrome lighthouse ](./assets/readme_media/chrome_lighthouse.png)
+  - Accessibility second Testing Using chrome lighthouse ![chrome_lighthouse ](./assets/readme_media/chrome_lighthouse.png)
 
   - No errors were returned when passing through [WAVE Evaluation Tool](https://wave.webaim.org/)
 
