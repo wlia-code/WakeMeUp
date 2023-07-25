@@ -77,9 +77,9 @@ The purpose of this website is to provide an engaging memory matching game that 
 - All fonts using from [fonts.google](https://fonts.google.com)
 
 ### Media
-- Website scrrenshot used on ReadMe file via [Am I Responsive](https://ui.dev/amiresponsive)
+- Website ScreenShot used on ReadMe file via [Am I Responsive](https://ui.dev/amiresponsive)
  and
   [Movavi ScreenShot Chrome Extension](https://www.screencapture.com/)
-  
+
 - All photos used taken from [Free svg](https://freesvg.org/)
 - Emoji [Get Emoji](https://getemoji.com/)
