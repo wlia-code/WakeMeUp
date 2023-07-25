@@ -54,6 +54,8 @@ The purpose of this website is to provide an engaging memory matching game that 
 
 ### Validator Testing
 
+- Accessibility Testing
+  - No errors were returned when passing through  [WAVE Evaluation Tool](https://wave.webaim.org/)
 - JAVASCRIPT
   - No errors were returned when passing through the official [jshint](https://jshint.com/)
 - HTML
@@ -64,7 +66,8 @@ The purpose of this website is to provide an engaging memory matching game that 
 ## Deployment
 
 - The site was deployed to GitHub pages.
-  The live link can be found here - https://wlia-code.github.io/WakeMeUp/
+  
+  The live link can be found here: https://wlia-code.github.io/WakeMeUp/
 
 ## Credits
 
@@ -74,6 +77,9 @@ The purpose of this website is to provide an engaging memory matching game that 
 - All fonts using from [fonts.google](https://fonts.google.com)
 
 ### Media
-
+- Website scrrenshot used on ReadMe file via [Am I Responsive](https://ui.dev/amiresponsive)
+ and
+  [Movavi ScreenShot Chrome Extension](https://www.screencapture.com/)
+  
 - All photos used taken from [Free svg](https://freesvg.org/)
 - Emoji [Get Emoji](https://getemoji.com/)
