@@ -16,14 +16,11 @@ The purpose of this website is to provide an engaging memory matching game that 
 
     ![Start_Game_Overlay_image](./assets/readme_media/Start_Game_Overlay_image.jpg)
 
-
 - **Player Name and Wrong Tries**
 
-  - The header section displays the player's name and the number of wrong tries made during the game.  
+  - The header section displays the player's name and the number of wrong tries made during the game.
 
-    ![header_image](./assets/readme_media/header_image.jpg)
-
-
+    ![header_image](./assets/readme_media/Footer_image.jpg)
 
 - **Game Board**
 
@@ -51,7 +48,7 @@ The purpose of this website is to provide an engaging memory matching game that 
 
   - footer section includes links to My social media sites ,The links are easily accessible and will open in a new tab, allowing for seamless navigation for the user. We're active on a variety of social media platforms, so be sure to follow us for updates, tips
 
-    ![Footer_image](./assets/readme_media/Footer_image.jpg)
+    ![Footer_image](./assets/readme_media/header_image.jpg)
 
 ## Testing
 
