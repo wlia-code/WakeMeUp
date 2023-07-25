@@ -50,15 +50,26 @@ The purpose of this website is to provide an engaging memory matching game that 
 
     ![Footer_image](./assets/readme_media/header_image.jpg)
 
+    ### Features Left to Implement
+
+- Timer and Time's Up Message
+  - Introduce a countdown timer that starts when the player begins the game.
+      Display a "Time's Up" message when the timer reaches zero, indicating that the game is over.
+      This feature would add a sense of urgency and challenge to the game, encouraging players to match cards quickly.
+- Multiple Levels with Increased Difficulty
+  - Implement additional levels with an increasing number of cards and a higher level of difficulty.
+- Sound Effects for Matched Cards and Wrong Tries
+  - Include sound effects that play when the player successfully matches two cards with identical symbols.
+
 ## Testing
 
 - The Memory Matching Game was tested on the following browsers:
 
-  -Google Chrome
-  -Mozilla Firefox
-  -Microsoft Edge
-  -Apple Safari
-  -The game worked seamlessly on all tested browsers, and the flipping animation and interactions were consistent across them.
+  - Google Chrome
+  - Mozilla Firefox
+  - Microsoft Edge
+  - Apple Safari
+  - The game worked seamlessly on all tested browsers, and the flipping animation and interactions were consistent across them.
 
 ### Validator Testing
 
@@ -67,8 +78,6 @@ The purpose of this website is to provide an engaging memory matching game that 
   - No errors were returned when passing through [WAVE Evaluation Tool](https://wave.webaim.org/)
 
   - Accessibility second Testing Using chrome lighthouse ![chrome_lighthouse ](./assets/readme_media/chrome_lighthouse.png)
-
-  - No errors were returned when passing through [WAVE Evaluation Tool](https://wave.webaim.org/)
 
 - JAVASCRIPT
   - No errors were returned when passing through the official [jshint](https://jshint.com/)
