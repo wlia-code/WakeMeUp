@@ -1,6 +1,7 @@
 # Wake Me Up! (MemoryGame)
 
 Welcome to the Memory Matching Game! This website is dedicated to providing a fun and challenging memory game for players of all ages.
+
 ![website_Screenshot](./assets/readme_media/website_Screenshot.jpg)
 
 ## Purpose For This Project:
@@ -12,26 +13,34 @@ The purpose of this website is to provide an engaging memory matching game that 
 - **Start Game Overlay**
 
   - At the beginning of the game, a start game overlay is displayed, prompting the player to enter their name to start the game or play as a guest.
+
     ![Start_Game_Overlay_image](./assets/readme_media/Start_Game_Overlay_image.jpg)
+
 
 - **Player Name and Wrong Tries**
 
   - The header section displays the player's name and the number of wrong tries made during the game.  
+
     ![header_image](./assets/readme_media/header_image.jpg)
+
+
 
 - **Game Board**
 
   - The main game board contains a grid of cards with different animal images. Players can click on the cards to flip them and reveal the hidden animal images.
+
     ![Game_Board_image](./assets/readme_media/Game_Board_image.jpg)
 
 - **Flipping Animation**
 
   - When a card is clicked, it flips over to reveal the animal image. If the two flipped cards match, they remain facing up. If they don't match, they flip back down after a brief delay.
+
     ![Flipping_Animation_image](./assets/readme_media/Flipping_Animation_image.jpg)
 
 - **Finish Dialog**
 
   - When the player successfully matches all pairs of cards, a finish dialog appears to congratulate the player and offer the option to play again or finish the game.
+
     ![Finish_Dialog](./assets/readme_media/Finish_Dialog.jpg)
 
 - **Responsive Design**
@@ -40,7 +49,8 @@ The purpose of this website is to provide an engaging memory matching game that 
 
 - **The Footer**
 
-  - footer section includes links to My social media sites ,The links are easily accessible and will open in a new tab, allowing for seamless navigation for the user. We're active on a variety of social media platforms, so be sure to follow us for updates, tips,
+  - footer section includes links to My social media sites ,The links are easily accessible and will open in a new tab, allowing for seamless navigation for the user. We're active on a variety of social media platforms, so be sure to follow us for updates, tips
+
     ![Footer_image](./assets/readme_media/Footer_image.jpg)
 
 ## Testing
