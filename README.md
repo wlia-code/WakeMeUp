@@ -50,12 +50,12 @@ The purpose of this website is to provide an engaging memory matching game that 
 
     ![Footer_image](./assets/readme_media/header_image.jpg)
 
-    ### Features Left to Implement
+## Features Left to Implement
 
 - Timer and Time's Up Message
   - Introduce a countdown timer that starts when the player begins the game.
-      Display a "Time's Up" message when the timer reaches zero, indicating that the game is over.
-      This feature would add a sense of urgency and challenge to the game, encouraging players to match cards quickly.
+    Display a "Time's Up" message when the timer reaches zero, indicating that the game is over.
+    This feature would add a sense of urgency and challenge to the game, encouraging players to match cards quickly.
 - Multiple Levels with Increased Difficulty
   - Implement additional levels with an increasing number of cards and a higher level of difficulty.
 - Sound Effects for Matched Cards and Wrong Tries
@@ -70,6 +70,20 @@ The purpose of this website is to provide an engaging memory matching game that 
   - Microsoft Edge
   - Apple Safari
   - The game worked seamlessly on all tested browsers, and the flipping animation and interactions were consistent across them.
+
+### Bugs
+
+#### Solved Bugs:
+
+- duplicated Files in Git Repository:
+  - The duplicate files were removed from the Git repository using the command:
+    ```bash
+    git rm --cached img
+    ```
+
+#### Unsolved Bugs:
+
+- No unsolved bugs
 
 ### Validator Testing
 
