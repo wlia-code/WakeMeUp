@@ -50,7 +50,7 @@ The purpose of this website is to provide an engaging memory matching game that 
 
     ![Footer_image](./assets/readme_media/header_image.jpg)
 
-## Features Left to Implement
+## Features Left to Implement:
 
 - Timer and Time's Up Message
   - Introduce a countdown timer that starts when the player begins the game.
@@ -61,7 +61,7 @@ The purpose of this website is to provide an engaging memory matching game that 
 - Sound Effects for Matched Cards and Wrong Tries
   - Include sound effects that play when the player successfully matches two cards with identical symbols.
 
-## Testing
+## Testing:
 
 - The Memory Matching Game was tested on the following browsers:
 
@@ -71,7 +71,7 @@ The purpose of this website is to provide an engaging memory matching game that 
   - Apple Safari
   - The game worked seamlessly on all tested browsers, and the flipping animation and interactions were consistent across them.
 
-### Bugs
+### Bugs:
 
 #### Solved Bugs:
 
@@ -85,7 +85,7 @@ The purpose of this website is to provide an engaging memory matching game that 
 
 - No unsolved bugs
 
-### Validator Testing
+### Validator Testing:
 
 - Accessibility Testing
 
@@ -100,7 +100,7 @@ The purpose of this website is to provide an engaging memory matching game that 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator)
 
-## Deployment
+## Deployment:
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
   - In the GitHub repository, navigate to the Settings tab
@@ -111,12 +111,12 @@ The live link can be found here - https://wlia-code.github.io/WakeMeUp/
 
 ## Credits
 
-### Content
+### Content:
 
 - The icons in the footer were taken from [Font.Awesome](https://fontawesome.com)
 - All fonts using from [fonts.google](https://fonts.google.com)
 
-### Media
+### Media:
 
 - Website ScreenShot used on ReadMe file via [Am I Responsive](https://ui.dev/amiresponsive)
   and

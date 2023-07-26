@@ -155,8 +155,8 @@ h1 {
   border: solid 2px #161624;
 }
 
-.start-game-message input label {
-  font-size: 1.4vw;
+#fname {
+  font-size: 1.9vw;
 }
 
 .start-game-message button {
@@ -280,41 +280,52 @@ footer h3 {
 
 @media only screen and (max-width: 2400px) {
   .start-game-message {
-    width: 50vw;
-    height: 50vh;
+    width: 55vw;
+    height: 55vh;
   }
 
   .start-game-message h2 {
-    font-size: 2.2vw;
+    font-size: 3vw;
   }
 
   .start-game-message p {
-    font-size: 1.6vw;
+    font-size: 1.5vw;
+  }
+
+  .start-game-message input {
+    padding: 1.5vw 1.8vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
   }
 
   .start-game-message button {
-    padding: 0.6vw 1.5vw;
-    font-size: 1.6vw;
+    padding: 1.5vw 3vw;
+    font-size: 1vw;
   }
 }
-
 @media only screen and (max-width: 1400px) {
   .start-game-message {
-    width: 50vw;
-    height: 50vh;
+    width: 55vw;
+    height: 65vh;
   }
 
   .start-game-message h2 {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
   }
 
   .start-game-message p {
-    font-size: 1.6vw;
+    font-size: 2vw;
+  }
+
+  .start-game-message input {
+    padding: 1.5vw 1.8vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
   }
 
   .start-game-message button {
-    padding: 0.6vw 1.5vw;
-    font-size: 1.6vw;
+    padding: 1.5vw 2.5vw;
+    font-size: 1vw;
   }
 }
 
