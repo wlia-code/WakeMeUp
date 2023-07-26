@@ -115,6 +115,9 @@ h1 {
 /*------ Strat game buttons and text ------*/
 
 .start-game-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -126,16 +129,15 @@ h1 {
 }
 
 .start-game-message {
-  width: 36vw;
-  height: 46vh;
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+  max-width: 80vw;
+  max-height: 80vh;
   background-color: #ffffff;
-  padding: 2vw;
+  padding: 2%;
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .start-game-message h2 {
@@ -149,10 +151,13 @@ h1 {
 }
 
 .start-game-message input {
-  padding: 1vw 1.2vw;
+  padding: 1%;
   margin-top: 1vh;
   margin-bottom: 1vh;
-  border: solid 2px #161624;
+  border: solid 0.13vw #161624;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 50%;
 }
 
 #fname {
@@ -161,29 +166,31 @@ h1 {
 
 .start-game-message button {
   color: rgb(0, 1, 1);
-  padding: 1.5vw 3vw;
-  font-size: 2vw;
+  padding: 1.5% 1%;
+  font-size: 1.5vw;
   text-transform: capitalize;
-}
-
-.start-game-message button:hover {
-  color: rgb(22, 33, 153);
-  background-color: #ffffff;
+  margin-top: 1vh;
+  max-width: 50%;
 }
 
 /*------- Styles for the finish game dialog box -------*/
 
 #finish-dialog {
   width: 50vw;
-  height: 35vh;
-  top: 25%;
-  left: 25%;
+  height: 39vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #0609b2d7;
   padding: 3vh 4vw;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   z-index: 3;
+  user-select: none;
 }
 
 #finish-message {
@@ -195,28 +202,18 @@ h1 {
   color: #f6f6f6;
 }
 
-#play-again-button {
-  font-size: 2vw;
-  padding: 1.5vh 4.5vw;
-  margin: 0.5vh 1vw;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: rgb(32, 147, 28);
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
+#play-again-button,
 #finish-button {
   font-size: 2vw;
-  padding: 1.5vh 6.5vw;
-  margin: 0.5vh 1vw;
+  padding: 1.5vh 6vw;
+  margin: 1vh 1vw;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   background-color: rgb(32, 147, 28);
   color: #fff;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 #play-again-button:hover,
@@ -278,132 +275,53 @@ footer h3 {
 
 /*-----Media queries-----*/
 
-@media only screen and (max-width: 2400px) {
-  .start-game-message {
-    width: 55vw;
-    height: 55vh;
-  }
-
-  .start-game-message h2 {
-    font-size: 3vw;
-  }
-
-  .start-game-message p {
-    font-size: 1.5vw;
-  }
-
-  .start-game-message input {
-    padding: 1.5vw 1.8vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-  }
-
-  .start-game-message button {
-    padding: 1.5vw 3vw;
-    font-size: 1vw;
-  }
-}
 @media only screen and (max-width: 1400px) {
   .start-game-message {
-    width: 55vw;
-    height: 65vh;
+    max-width: 80vw;
+    max-height: 80vh;
   }
-
   .start-game-message h2 {
     font-size: 2.5vw;
   }
-
   .start-game-message p {
     font-size: 2vw;
   }
-
   .start-game-message input {
-    padding: 1.5vw 1.8vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    padding: 1%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    max-width: 90%;
   }
-
   .start-game-message button {
-    padding: 1.5vw 2.5vw;
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .start-game-message {
-    width: 50vw;
-    height: 50vh;
-  }
-
-  .start-game-message h2 {
-    font-size: 3vw;
-  }
-
-  .start-game-message p {
-    font-size: 2vw;
-  }
-
-  .start-game-message input {
-    padding: 1.5vw 1.8vw;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-  }
-
-  .start-game-message button {
-    padding: 1.5vw 3vw;
-    font-size: 2vw;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .start-game-message {
-    width: 50vw;
-    height: 50vh;
-  }
-
-  .start-game-message h2 {
-    font-size: 3vw;
-  }
-
-  .start-game-message p {
-    font-size: 2vw;
-  }
-
-  .start-game-message input {
-    padding: 1.5vw 1.8vw;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-  }
-
-  .start-game-message button {
-    padding: 1.5vw 3vw;
-    font-size: 2vw;
+    padding: 1.5% 1%;
+    margin-top: 1vh;
+    max-width: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .start-game-message {
-    width: 60vw;
-    height: 50vh;
+    max-width: 80vw;
+    max-height: 80vh;
   }
-
   .start-game-message h2 {
-    font-size: 4vw;
+    font-size: 2.4vw;
+    margin-bottom: 1vh;
   }
-
   .start-game-message p {
-    font-size: 3vw;
+    font-size: 1.8vw;
+    margin-bottom: 2vh;
   }
-
   .start-game-message input {
-    padding: 2.5vw 3vw;
-    margin-top: 2.5vh;
-    margin-bottom: 3vh;
+    padding: 1%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    max-width: 90%;
   }
-
   .start-game-message button {
-    padding: 2.5vw 4vw;
-    font-size: 2.2vw;
+    padding: 1.5% 1%;
+    margin-top: 1vh;
+    max-width: 50%;
   }
 }
 
@@ -412,110 +330,46 @@ footer h3 {
     width: 60vw;
     height: 50vh;
   }
-
   .start-game-message h2 {
     font-size: 4vw;
   }
-
   .start-game-message p {
     font-size: 3vw;
   }
-
   .start-game-message input {
     padding: 2.5vw 3vw;
     margin-top: 2.5vh;
     margin-bottom: 3vh;
   }
-
   .start-game-message button {
-    padding: 2.5vw 4vw;
-    font-size: 2.2vw;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .start-game-message {
-    width: 60vw;
-    height: 50vh;
-  }
-
-  .start-game-message h2 {
-    font-size: 4vw;
-  }
-
-  .start-game-message p {
-    font-size: 3vw;
-  }
-
-  .start-game-message input {
-    padding: 2.5vw 3vw;
-    margin-top: 2.5vh;
-    margin-bottom: 3vh;
-  }
-
-  .start-game-message button {
-    padding: 2.5vw 4vw;
-    font-size: 2.2vw;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  h1 {
-    font-size: large;
-  }
-
-  .start-game-message {
-    width: 60vw;
-    height: 50vh;
-  }
-
-  .start-game-message h2 {
-    font-size: 4vw;
-  }
-
-  .start-game-message p {
-    font-size: 3vw;
-  }
-
-  .start-game-message input {
-    padding: 2vw 2vw;
-    margin-top: 1.5vh;
-    margin-bottom: 3vh;
-  }
-
-  .start-game-message button {
-    padding: 3.5vw 5vw;
-    font-size: 2.5vw;
+    padding: 1.5% 1%;
     margin-top: 1vh;
+    max-width: 50%;
   }
 }
+
 @media screen and (max-width: 350px) {
   h1 {
     font-size: large;
   }
-
   .start-game-message {
     width: 57vw;
     height: 40vh;
   }
-
   .start-game-message h2 {
     font-size: 4vw;
   }
-
   .start-game-message p {
     font-size: 3vw;
   }
-
   .start-game-message input {
     padding: 1vw 1vw;
     margin-top: 1.5vh;
     margin-bottom: 2vh;
   }
-
   .start-game-message button {
-    padding: 1.5vw 3vw;
-    font-size: 2.5vw;
+    padding: 1.5% 1%;
     margin-top: 1vh;
+    max-width: 50%;
   }
 }
